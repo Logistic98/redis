@@ -1,6 +1,6 @@
 {
     "KILL": {
-        "summary": "Kill the connection of a client",
+        "summary": "Terminates open connections.",
         "complexity": "O(N) where N is the number of client connections",
         "group": "connection",
         "since": "2.4.0",
@@ -27,6 +27,10 @@
             [
                 "6.2.0",
                 "`LADDR` option."
+            ],
+            [
+                "7.4.0",
+                "`MAXAGE` option."
             ]
         ],
         "command_flags": [
@@ -136,6 +140,13 @@
                                         "token": "NO"
                                     }
                                 ]
+                            },
+                            {
+                                "token": "MAXAGE",
+                                "name": "maxage",
+                                "type": "integer",
+                                "optional": true,
+                                "since": "7.4.0"
                             }
                         ]
                     }
